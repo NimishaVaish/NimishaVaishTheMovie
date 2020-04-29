@@ -44,6 +44,14 @@ public class moviePage_Steps extends android_MoviePage {
     public void verifyStarNameIsDisplayed(){
         starNameIsDisplayed();
     }
+    @When("^user clicks on TV tab$")
+    public void clickingOnTVTab(){
+         clickOnTVTab();
+    }
+    @Then("^verify TV tab is displayed$")
+   public void verifyTvTabIsDisplayed(){
+        tvTabIsDisplayed();
+    }
 
 
 }

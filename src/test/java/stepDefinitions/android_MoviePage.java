@@ -19,6 +19,9 @@ public class android_MoviePage extends DriverFactory {
     @AndroidFindBy(xpath="//android.widget.TextView[@text='Movie']")
     AndroidElement MovieTab;
 
+    @AndroidFindBy(xpath="//android.widget.TextView[@text='TV']")
+    AndroidElement TVTab;
+
     @AndroidFindBy(className = "android.widget.RatingBar")
     AndroidElement RatingBar;
 
@@ -57,6 +60,13 @@ public class android_MoviePage extends DriverFactory {
     }
 
     /**
+     * user clicks on TV tab
+     */
+    public void clickOnTVTab(){
+        TVTab.click();
+    }
+
+    /**
      * User clicks on Movie name
      */
     public void selectMovie() {
@@ -76,6 +86,17 @@ public class android_MoviePage extends DriverFactory {
             Assert.assertEquals(movieTab,"Movie");
         }
     }
+
+    /**
+     * to check TV tab is displayed in the app or not
+     */
+    public void tvTabIsDisplayed(){
+        if(TVTab.isDisplayed()){
+            String tvTab = TVTab.getText();
+            Assert.assertEquals(tvTab,"TV");
+        }
+    }
+
 
     /**
      * to verify Summary of the movie is displayed or not
