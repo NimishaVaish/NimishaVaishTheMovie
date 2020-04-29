@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import utils.DriverFactory;
 
 @CucumberOptions(
-        features = {"src//test//java//Feature"},
+        features = {"src//test//java//features"},
         glue = {"stepDefinitions"},
         monochrome = true,
         plugin = {"pretty", "json:target/cucumber.json", "html:target/site/cucumber-pretty"},

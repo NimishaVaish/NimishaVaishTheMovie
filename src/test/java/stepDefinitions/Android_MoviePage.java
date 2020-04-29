@@ -8,7 +8,7 @@ import org.testng.Assert;
 import utils.DriverFactory;
 
 
-public class android_MoviePage extends DriverFactory {
+public class Android_MoviePage extends DriverFactory {
 
     @AndroidFindBy(xpath = "//*[@text='Cars']")
     AndroidElement MovieName;
@@ -145,8 +145,7 @@ public class android_MoviePage extends DriverFactory {
     }
 
 
-
-    public android_MoviePage() {
+    public Android_MoviePage() {
         PageFactory.initElements(new AppiumFieldDecorator(DriverFactory.driver), this);
     }
 

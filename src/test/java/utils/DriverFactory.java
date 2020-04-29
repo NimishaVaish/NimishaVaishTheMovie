@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
             capabilities.setCapability("appActivity","com.skydoves.themovies.view.ui.main.MainActivity");
 
             String userDir = System.getProperty("user.dir");
-            capabilities.setCapability("app", userDir+"/src/test/java/Apps/app-release.apk");
+            capabilities.setCapability("app", userDir+"/src/test/java/apps/app-release.apk");
 
             driver = new AndroidDriver(serverAddress, capabilities);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

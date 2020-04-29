@@ -4,7 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class moviePage_Steps extends android_MoviePage {
+public class MoviePage_Steps extends Android_MoviePage {
 
 
     @Given("^user is on Movie page$")
