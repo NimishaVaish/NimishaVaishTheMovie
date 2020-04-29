@@ -2,8 +2,8 @@
 # Project Description:
 It is the Movie app with Movie, TV and Star tabs
 # Cloning the Repository
-Select branch masterNimishaVaish and click on clone http
-Then in your terminal give following command:git clone <ctrl+V>
+Select branch masterNimishaVaish and click on copy to clipboard link for clone with https link
+Then in your terminal at any desired location give following command:git clone <ctrl+V>
 This will create project folder in the desired location in your system
 Then in eclipse or intelliJ import exisiting Maven project
 # Maven Cucumber Framework:
