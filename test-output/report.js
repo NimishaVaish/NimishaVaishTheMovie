@@ -13,24 +13,30 @@ formatter.step({
   "name": "The application is launched on the mobile device",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.MovieP.theApplicationIsLaunchedOnTheMobileDevice()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user clicks on any Movie",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.MovieP.clickOnMovie()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 formatter.step({
   "name": "verify that summary page is opened",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.MovieP.verifySummaryPage()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 });
