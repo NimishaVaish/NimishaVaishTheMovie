@@ -1,0 +1,430 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6832677295,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User clicks on Movie to see Summary",
+        "description": "",
+        "id": "movie;user-clicks-on-movie-to-see-summary",
+        "after": [
+          {
+            "result": {
+              "duration": 98250699,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2524942289,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Movie page",
+            "match": {
+              "location": "MoviePage_Steps.onMoviePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 363642106,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on first Movie",
+            "match": {
+              "location": "MoviePage_Steps.userClicksOnFirstMovie()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1639536971,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "verify Summary is displayed",
+            "match": {
+              "location": "MoviePage_Steps.MovieSummaryIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7903129367,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "User checks the review rating of the movie",
+        "description": "",
+        "id": "movie;user-checks-the-review-rating-of-the-movie",
+        "after": [
+          {
+            "result": {
+              "duration": 113758703,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2914389684,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is on Movie page",
+            "match": {
+              "location": "MoviePage_Steps.onMoviePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 413031046,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicks on first Movie",
+            "match": {
+              "location": "MoviePage_Steps.userClicksOnFirstMovie()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1468333537,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "verify Ratings is displayed",
+            "match": {
+              "location": "MoviePage_Steps.ratingsIDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6562103007,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User checks the Release date of the movie",
+        "description": "",
+        "id": "movie;user-checks-the-release-date-of-the-movie",
+        "after": [
+          {
+            "result": {
+              "duration": 139810553,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2260556938,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user is on Movie page",
+            "match": {
+              "location": "MoviePage_Steps.onMoviePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 362845925,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user clicks on first Movie",
+            "match": {
+              "location": "MoviePage_Steps.userClicksOnFirstMovie()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1964968879,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify ReleaseDate is displayed",
+            "match": {
+              "location": "MoviePage_Steps.releaseDateIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 17,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6407602560,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "User verifies star name is present when user navigates to Summary page and then going back to star tab",
+        "description": "",
+        "id": "movie;user-verifies-star-name-is-present-when-user-navigates-to-summary-page-and-then-going-back-to-star-tab",
+        "after": [
+          {
+            "result": {
+              "duration": 100827033,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3212863776,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user is on Movie page",
+            "match": {
+              "location": "MoviePage_Steps.onMoviePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 519880018,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user clicks on first Movie",
+            "match": {
+              "location": "MoviePage_Steps.userClicksOnFirstMovie()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1580136013,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user clicks on  go back tab",
+            "match": {
+              "location": "MoviePage_Steps.clickingOnGoBackButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 945165912,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user clicks on star tab",
+            "match": {
+              "location": "MoviePage_Steps.clicksOnStarTab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1084665953,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "verify star name is present",
+            "match": {
+              "location": "MoviePage_Steps.verifyStarNameIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 24,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6517041732,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User clicks on TV tab from Movie page and then again clicks on Movie tab",
+        "description": "",
+        "id": "movie;user-clicks-on-tv-tab-from-movie-page-and-then-again-clicks-on-movie-tab",
+        "after": [
+          {
+            "result": {
+              "duration": 89450741,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2323445914,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user is on Movie page",
+            "match": {
+              "location": "MoviePage_Steps.onMoviePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 745460441,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user clicks on TV tab",
+            "match": {
+              "location": "MoviePage_Steps.clickingOnTVTab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1685880579,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "verify Tv content is displayed",
+            "match": {
+              "location": "MoviePage_Steps.verifyTvContentIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 191747440,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user clicks on Movie tab",
+            "match": {
+              "location": "MoviePage_Steps.clicksOnMovieTab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1020134316,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "verify Movie tab is displayed",
+            "match": {
+              "location": "MoviePage_Steps.verifyMovieTabIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 32,
+            "name": "@run"
+          }
+        ]
+      }
+    ],
+    "name": "Movie",
+    "description": "",
+    "id": "movie",
+    "keyword": "Feature",
+    "uri": "Movie_Android.feature"
+  }
+]

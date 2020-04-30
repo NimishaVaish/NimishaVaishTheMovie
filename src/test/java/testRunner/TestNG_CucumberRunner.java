@@ -14,7 +14,7 @@ import utils.DriverFactory;
         features = {"src//test//java//features"},
         glue = {"stepDefinitions"},
         monochrome = true,
-        plugin = {"pretty", "json:target/cucumber.json", "html:target/site/cucumber-pretty"},
+        plugin = {"pretty", "json:test-output/cucumber.json", "html:test-output/cucumber-pretty"},
         tags = {"@run"}
 
 )
