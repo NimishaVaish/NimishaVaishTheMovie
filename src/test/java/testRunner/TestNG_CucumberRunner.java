@@ -26,7 +26,7 @@ public class TestNG_CucumberRunner extends DriverFactory {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
-    @Test(groups = "cucumber", description = "Runs LoginCandiate Feature", dataProvider = "features")
+    @Test(groups = "cucumber", description = "Runs Movie_Android Feature", dataProvider = "features")
     public void feature(CucumberFeatureWrapper cucumberFeature) {
         System.out.println("Cucumber Test Class Inside Test");
         System.out.println(cucumberFeature.getCucumberFeature());

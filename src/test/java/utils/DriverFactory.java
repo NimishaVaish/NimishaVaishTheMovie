@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 
         public void getSetup_android() throws MalformedURLException {
+
             URL serverAddress = new URL("http://127.0.0.1:4723/wd/hub");
 
             DesiredCapabilities capabilities = new DesiredCapabilities();

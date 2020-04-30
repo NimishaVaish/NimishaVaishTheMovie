@@ -12,8 +12,8 @@ public class MoviePage_Steps extends Android_MoviePage {
         movieTabIsDisplayed();
     }
 
-    @When("^user clicks on Cars Movie$")
-    public void userClicksOnCarsMovie() {
+    @When("^user clicks on first Movie$")
+    public void userClicksOnFirstMovie() {
         selectMovie();
     }
 
@@ -48,9 +48,17 @@ public class MoviePage_Steps extends Android_MoviePage {
     public void clickingOnTVTab(){
          clickOnTVTab();
     }
-    @Then("^verify TV tab is displayed$")
-   public void verifyTvTabIsDisplayed(){
-        tvTabIsDisplayed();
+    @Then("^verify Tv content is displayed$")
+   public void verifyTvContentIsDisplayed(){
+        tvContentIsDisplayed();
+    }
+    @When("^user clicks on Movie tab$")
+    public void clicksOnMovieTab(){
+        clickOnMovieTab();
+    }
+    @Then("^verify Movie tab is displayed$")
+    public void verifyMovieTabIsDisplayed(){
+        movieTabIsDisplayed();
     }
 
 
