@@ -23,5 +23,5 @@ In order to run the project run the testAndroid.xml file
 Right click on testAndroid.xml and click on Run
 # For reporting:
 Using cucumber html report
-Navigate to target>site>cucumber-pretty>index.html in your project
+Navigate to test-output>cucumber-pretty>index.html in your project
 open this in any browser to see cucumber report
