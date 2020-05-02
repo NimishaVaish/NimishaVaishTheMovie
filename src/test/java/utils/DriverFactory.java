@@ -4,19 +4,17 @@ package utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
-    public  class DriverFactory {
+    public  class DriverFactory  {
         public static AppiumDriver driver = null;
-        public static WebDriverWait driverWait = null;
 
 
-        public void getSetup_android() throws MalformedURLException {
-
+        public void getSetup_android(){
+            try{
             URL serverAddress = new URL("http://127.0.0.1:4723/wd/hub");
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -33,9 +31,13 @@ import java.util.concurrent.TimeUnit;
             driver = new AndroidDriver(serverAddress, capabilities);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             System.out.println("Movie app is launched");
+
+            }catch(MalformedURLException e) {
+                System.out.println("Appium could not launch the app");
+            }
         }
 
-        public void tearDown() throws Exception {
+        public void tearDown()  {
             if (driver != null)
                 driver.quit();
         }
