@@ -7,14 +7,14 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 6832677295,
+  "duration": 10556239754,
   "status": "passed"
 });
 formatter.scenario({
   "line": 4,
-  "name": "User clicks on Movie to see Summary",
+  "name": "User clicks on Movie to see Summary of the Movie",
   "description": "",
-  "id": "movie;user-clicks-on-movie-to-see-summary",
+  "id": "movie;user-clicks-on-movie-to-see-summary-of-the-movie",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -26,7 +26,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 5,
-  "name": "user is on Movie page",
+  "name": "user is on Movie tab",
   "keyword": "Given "
 });
 formatter.step({
@@ -40,39 +40,39 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MoviePage_Steps.onMoviePage()"
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
 });
 formatter.result({
-  "duration": 2524942289,
+  "duration": 2892736173,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.userClicksOnFirstMovie()"
 });
 formatter.result({
-  "duration": 363642106,
+  "duration": 328096445,
   "status": "passed"
 });
 formatter.match({
-  "location": "MoviePage_Steps.MovieSummaryIsDisplayed()"
+  "location": "MoviePage_Steps.movieSummaryIsDisplayed()"
 });
 formatter.result({
-  "duration": 1639536971,
+  "duration": 1670180212,
   "status": "passed"
 });
 formatter.after({
-  "duration": 98250699,
+  "duration": 147567928,
   "status": "passed"
 });
 formatter.before({
-  "duration": 7903129367,
+  "duration": 10699075625,
   "status": "passed"
 });
 formatter.scenario({
   "line": 11,
-  "name": "User checks the review rating of the movie",
+  "name": "User checks the review rating of the movie is displayed",
   "description": "",
-  "id": "movie;user-checks-the-review-rating-of-the-movie",
+  "id": "movie;user-checks-the-review-rating-of-the-movie-is-displayed",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -84,7 +84,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 12,
-  "name": "user is on Movie page",
+  "name": "user is on Movie tab",
   "keyword": "Given "
 });
 formatter.step({
@@ -98,39 +98,39 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MoviePage_Steps.onMoviePage()"
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
 });
 formatter.result({
-  "duration": 2914389684,
+  "duration": 2150896920,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.userClicksOnFirstMovie()"
 });
 formatter.result({
-  "duration": 413031046,
+  "duration": 437102024,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.ratingsIDisplayed()"
 });
 formatter.result({
-  "duration": 1468333537,
+  "duration": 1613666945,
   "status": "passed"
 });
 formatter.after({
-  "duration": 113758703,
+  "duration": 199681105,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6562103007,
+  "duration": 8899311975,
   "status": "passed"
 });
 formatter.scenario({
   "line": 18,
-  "name": "User checks the Release date of the movie",
+  "name": "User checks the Release date of the movie is displayed",
   "description": "",
-  "id": "movie;user-checks-the-release-date-of-the-movie",
+  "id": "movie;user-checks-the-release-date-of-the-movie-is-displayed",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -142,7 +142,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 19,
-  "name": "user is on Movie page",
+  "name": "user is on Movie tab",
   "keyword": "Given "
 });
 formatter.step({
@@ -156,39 +156,39 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MoviePage_Steps.onMoviePage()"
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
 });
 formatter.result({
-  "duration": 2260556938,
+  "duration": 3431762247,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.userClicksOnFirstMovie()"
 });
 formatter.result({
-  "duration": 362845925,
+  "duration": 500695343,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.releaseDateIsDisplayed()"
 });
 formatter.result({
-  "duration": 1964968879,
+  "duration": 1698260400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 139810553,
+  "duration": 199555743,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6407602560,
+  "duration": 11503173244,
   "status": "passed"
 });
 formatter.scenario({
   "line": 25,
-  "name": "User verifies star name is present when user navigates to Summary page and then going back to star tab",
+  "name": "User navigates between Movie and Star tab",
   "description": "",
-  "id": "movie;user-verifies-star-name-is-present-when-user-navigates-to-summary-page-and-then-going-back-to-star-tab",
+  "id": "movie;user-navigates-between-movie-and-star-tab",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -200,7 +200,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 26,
-  "name": "user is on Movie page",
+  "name": "user is on Movie tab",
   "keyword": "Given "
 });
 formatter.step({
@@ -224,53 +224,53 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MoviePage_Steps.onMoviePage()"
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
 });
 formatter.result({
-  "duration": 3212863776,
+  "duration": 2894549336,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.userClicksOnFirstMovie()"
 });
 formatter.result({
-  "duration": 519880018,
+  "duration": 447899880,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.clickingOnGoBackButton()"
 });
 formatter.result({
-  "duration": 1580136013,
+  "duration": 1499260286,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.clicksOnStarTab()"
 });
 formatter.result({
-  "duration": 945165912,
+  "duration": 900406649,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.verifyStarNameIsDisplayed()"
 });
 formatter.result({
-  "duration": 1084665953,
+  "duration": 998191330,
   "status": "passed"
 });
 formatter.after({
-  "duration": 100827033,
+  "duration": 101818235,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6517041732,
+  "duration": 11398218615,
   "status": "passed"
 });
 formatter.scenario({
   "line": 33,
-  "name": "User clicks on TV tab from Movie page and then again clicks on Movie tab",
+  "name": "User navigates between Movie and TV tab",
   "description": "",
-  "id": "movie;user-clicks-on-tv-tab-from-movie-page-and-then-again-clicks-on-movie-tab",
+  "id": "movie;user-navigates-between-movie-and-tv-tab",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -282,7 +282,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 34,
-  "name": "user is on Movie page",
+  "name": "user is on Movie tab",
   "keyword": "Given "
 });
 formatter.step({
@@ -306,42 +306,100 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MoviePage_Steps.onMoviePage()"
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
 });
 formatter.result({
-  "duration": 2323445914,
+  "duration": 2146738130,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.clickingOnTVTab()"
 });
 formatter.result({
-  "duration": 745460441,
+  "duration": 249592945,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.verifyTvContentIsDisplayed()"
 });
 formatter.result({
-  "duration": 1685880579,
+  "duration": 1050928709,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.clicksOnMovieTab()"
 });
 formatter.result({
-  "duration": 191747440,
+  "duration": 198390769,
   "status": "passed"
 });
 formatter.match({
   "location": "MoviePage_Steps.verifyMovieTabIsDisplayed()"
 });
 formatter.result({
-  "duration": 1020134316,
+  "duration": 1011233971,
   "status": "passed"
 });
 formatter.after({
-  "duration": 89450741,
+  "duration": 188469121,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 7308568860,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 41,
+  "name": "User is able to scroll down in the Movie section and new movie is displayed",
+  "description": "",
+  "id": "movie;user-is-able-to-scroll-down-in-the-movie-section-and-new-movie-is-displayed",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 40,
+      "name": "@run"
+    }
+  ]
+});
+formatter.step({
+  "line": 42,
+  "name": "user is on Movie tab",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 43,
+  "name": "user scrolls down",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 44,
+  "name": "verify the new movie is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MoviePage_Steps.userIsOnMoviePage()"
+});
+formatter.result({
+  "duration": 2433545046,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MoviePage_Steps.scrollDownThePage()"
+});
+formatter.result({
+  "duration": 6249864739,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MoviePage_Steps.verifyScrollPositionOfTheMovie()"
+});
+formatter.result({
+  "duration": 161851605,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 138426822,
   "status": "passed"
 });
 });

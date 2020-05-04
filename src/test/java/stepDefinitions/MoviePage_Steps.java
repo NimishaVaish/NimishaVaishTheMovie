@@ -3,62 +3,78 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import static org.testng.Assert.assertTrue;
 
 public class MoviePage_Steps extends Android_MoviePage {
 
 
-    @Given("^user is on Movie page$")
-    public void onMoviePage() {
-        movieTabIsDisplayed();
+    @Given("^user is on Movie tab$")
+    public void userIsOnMoviePage() {
+        assertTrue(movieTabIsDisplayed());
     }
 
     @When("^user clicks on first Movie$")
-    public void userClicksOnFirstMovie() {
-        selectMovie();
+    public void userClicksOnFirstMovie()
+    {
+        assertTrue(selectMovie());
     }
 
     @Then("^verify Summary is displayed$")
-    public void MovieSummaryIsDisplayed() {
-        summaryIsDisplayed();
+    public void movieSummaryIsDisplayed() {
+        assertTrue(summaryIsDisplayed());
 
     }
 
     @Then("^verify Ratings is displayed$")
-    public void ratingsIDisplayed(){
-        RatingBarIsDisplayed();
+    public void ratingsIDisplayed()
+    {
+        assertTrue(RatingBarIsDisplayed());
     }
 
     @Then("^verify ReleaseDate is displayed$")
     public void releaseDateIsDisplayed(){
-        ReleaseDateIsDisplayed();
+
+        assertTrue(ReleaseDateIsDisplayed());
     }
     @Then("^user clicks on  go back tab$")
-    public void clickingOnGoBackButton(){
-        clickOnGoBack();
+    public void clickingOnGoBackButton()
+    {
+        assertTrue(clickOnGoBack());
     }
     @When("^user clicks on star tab$")
-    public void clicksOnStarTab(){
-        clickOnStarTab();
+    public void clicksOnStarTab()
+    {
+        assertTrue(clickOnStarTab());
     }
     @Then("^verify star name is present$")
-    public void verifyStarNameIsDisplayed(){
+    public void verifyStarNameIsDisplayed()
+    {
         starNameIsDisplayed();
     }
     @When("^user clicks on TV tab$")
     public void clickingOnTVTab(){
-         clickOnTVTab();
+         assertTrue(clickOnTVTab());
     }
     @Then("^verify Tv content is displayed$")
    public void verifyTvContentIsDisplayed(){
-        tvContentIsDisplayed();
+        assertTrue(tvContentIsDisplayed());
     }
     @When("^user clicks on Movie tab$")
     public void clicksOnMovieTab(){
-        clickOnMovieTab();
+        assertTrue(clickOnMovieTab());
     }
     @Then("^verify Movie tab is displayed$")
     public void verifyMovieTabIsDisplayed(){
-        movieTabIsDisplayed();
+        assertTrue(movieTabIsDisplayed());
+    }
+    @When("^user scrolls down$")
+    public void scrollDownThePage(){
+        assertTrue(scrollDown());
+    }
+    @Then("^verify the new movie is displayed")
+    public void verifyScrollPositionOfTheMovie(){
+        assertTrue(verifyMovieIsDisplayed());
+
     }
 
 

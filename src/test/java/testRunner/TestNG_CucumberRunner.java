@@ -19,28 +19,27 @@ import utils.DriverFactory;
 
 )
 public class TestNG_CucumberRunner extends DriverFactory {
+
     private TestNGCucumberRunner testNGCucumberRunner;
     @BeforeClass(alwaysRun = true)
     public void setUpClass() {
-        System.out.println("Cucumber Test Class Before");
+
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
     @Test(groups = "cucumber", description = "Runs Movie_Android Feature", dataProvider = "features")
     public void feature(CucumberFeatureWrapper cucumberFeature) {
         System.out.println("Cucumber Test Class Inside Test");
-        System.out.println(cucumberFeature.getCucumberFeature());
         testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
     }
 
     @DataProvider
     public Object[][] features() {
-        System.out.println("Data Provider test Class");
         return testNGCucumberRunner.provideFeatures();
     }
 
     @AfterClass(alwaysRun = true)
-    public void tearDownClass() throws Exception {
+    public void tearDownClass() {
         testNGCucumberRunner.finish();
     }
 }

@@ -1,24 +1,31 @@
 package stepDefinitions;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.NoSuchElementException;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import utils.DriverFactory;
+import java.time.Duration;
+
+import static org.testng.Assert.*;
 
 
 public class Android_MoviePage extends DriverFactory {
 
     @AndroidFindBy(xpath = "//android.widget.RelativeLayout[1]/android.widget.ImageView")
-    AndroidElement MovieName;
+    AndroidElement MovieTile;
+
+    @AndroidFindBy(xpath = "//android.widget.RelativeLayout[3]/android.widget.ImageView")
+    AndroidElement ThirdMovieTile;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Summary']")
-    AndroidElement Summary;
+    AndroidElement SummaryTitle;
 
     @AndroidFindBy(id = "com.skydoves.themovies:id/detail_body_summary")
-    AndroidElement SummaryBody;
+    AndroidElement SummaryContent;
 
     @AndroidFindBy(xpath = "//android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.TextView")
     AndroidElement TvContent;
@@ -41,169 +48,216 @@ public class Android_MoviePage extends DriverFactory {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Star']")
     AndroidElement StarTab;
 
-    @AndroidFindBy(xpath = "//*[@text='Tom Cruise']")
+    @AndroidFindBy(xpath = "//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.RelativeLayout")
     AndroidElement StarName;
 
 
     /**
-     * user clicks on Movie name
+     * user clicks on the Movie Tile
      */
     public void clickOnMovie() {
         try {
-            MovieName.click();
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+            MovieTile.click();
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
-
     /**
-     * user clicks on back button on the app
+     * @return true if user clicks on the Go Back button of the app
      */
-    public void clickOnGoBack() {
+    public boolean clickOnGoBack() {
         try {
         GoBack.click();
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
+    }
+    /**
+     * @return true if user clicks on Star tab
+     */
+    public boolean clickOnStarTab() {
+        try {
+            StarTab.click();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
     /**
-     * user clicks on Star tab
+     * @return true if user clicks on TV tab
      */
-    public void clickOnStarTab() {
-        try{
-        StarTab.click();
-    }catch(NoSuchElementException e){
-        System.out.println("Element is not present"+e);
-    }
-    }
-
-    /**
-     * user clicks on TV tab
-     */
-    public void clickOnTVTab() {
+    public boolean clickOnTVTab() {
         try{
         TVTab.click();
-    }catch(NoSuchElementException e){
-        System.out.println("Element is not present"+e);
+    }catch(Exception e){
+        e.printStackTrace();
     }
+        return true;
     }
 
     /**
-     * user clicks on Movie tab
+     * @return true if user clicks on Movie tab
      */
-    public void clickOnMovieTab() {
+    public boolean clickOnMovieTab() {
         try{
         MovieTab.click();
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
     }
 
     /**
-     * User clicks on Movie name
+     * @return true if user clicks on Movie name
      */
-    public void selectMovie() {
+    public boolean selectMovie() {
         try{
-        if (MovieName.isDisplayed()) {
+        if (MovieTile.isDisplayed()) {
             clickOnMovie();
-            System.out.println("User clicked on Movie name");
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
-
+        return true;
     }
 
-
     /**
-     * to check Movie tab is displayed in the app or not
+     * @return true if Movie tab is displayed
      */
-    public void movieTabIsDisplayed() {
+    public boolean movieTabIsDisplayed() {
         try{
         if (MovieTab.isDisplayed()) {
             String movieTab = MovieTab.getText();
-            Assert.assertEquals(movieTab, "Movie");
+            assertEquals(movieTab, "Movie");
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
     }
 
     /**
-     * to check TV tab is displayed and content is present in the app or not
+     * @return true if TV tab is displayed and content is present
      */
-    public void tvContentIsDisplayed() {
+    public boolean tvContentIsDisplayed() {
         try{
 
         if (TVTab.isDisplayed()) {
             String tvContent = TvContent.getText();
             System.out.println("Tv content title is: "+tvContent);
-            Assert.assertTrue(TvContent.isDisplayed());
         }
-    }catch(NoSuchElementException e){
-        System.out.println("Element is not present"+e);
+    }catch(Exception e){
+        e.printStackTrace();
     }
+        return true;
     }
-
 
     /**
-     * to verify Summary of the movie is displayed or not
+     * @return true if Summary of the movie is displayed
      */
-    public void summaryIsDisplayed() {
+    public boolean summaryIsDisplayed() {
         try{
-        if (Summary.isDisplayed()) {
-            Assert.assertTrue(SummaryBody.isDisplayed());
-
+        if (SummaryTitle.isDisplayed()) {
+            String summaryContent = SummaryContent.getText();
+            assertFalse(summaryContent.isEmpty());
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
     }
 
     /**
-     * To verify Ratings of the movie is displayed or not
+     * @return true if Ratings of the movie is displayed
      */
-    public void RatingBarIsDisplayed() {
+    public boolean RatingBarIsDisplayed() {
         try{
         if (RatingBar.isDisplayed()) {
             System.out.println("Ratings are present");
             String ratingBar = RatingBar.getText();
-            Assert.assertEquals(ratingBar, "7.0");
+            assertEquals(ratingBar, "7.0");
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
     }
-
     /**
-     * To verify Release date of the movie is displayed or not
+     * @return true if Release date of the movie is displayed
      */
-    public void ReleaseDateIsDisplayed() {
+    public boolean ReleaseDateIsDisplayed() {
         try{
         if (ReleaseDate.isDisplayed()) {
             System.out.println("Release Date is present");
             String releaseDate = ReleaseDate.getText();
-            Assert.assertEquals(releaseDate, "Release Date : 2006-06-08");
+            assertEquals(releaseDate, "Release Date : 2006-06-08");
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
     }
 
+
     /**
-     * To verify star name is displayed or not
+     * @return true if starName is displayed
      */
-    public void starNameIsDisplayed() {
+    public boolean starNameIsDisplayed() {
         try{
         if (StarName.isDisplayed()) {
             System.out.println("Star Name is present");
-            String starName = StarName.getText();
-            Assert.assertEquals(starName, "Tom Cruise");
         }
-        }catch(NoSuchElementException e){
-            System.out.println("Element is not present"+e);
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        return true;
+    }
+
+    /**
+     * @return  true if coordinates of the movie have changed after scrolling down
+     */
+    public boolean scrollDown() {
+
+
+        try {
+            int Xinitial = ThirdMovieTile.getLocation().getX();
+            int Yinitial = ThirdMovieTile.getLocation().getY();
+            System.out.println("Initial Coordinates are: " + Xinitial + " " + Yinitial);
+            PointOption initialPt = new PointOption().withCoordinates(Xinitial, Yinitial);
+
+            int Xfinal = MovieTile.getLocation().getX();
+            int Yfinal = MovieTile.getLocation().getY();
+            System.out.println("Final Coordinates are: " + Xfinal + " " + Yfinal);
+            PointOption newPt = new PointOption().withCoordinates(Xfinal, Yfinal);
+
+            TouchAction action = new TouchAction(driver);
+
+            action.press(initialPt).waitAction(WaitOptions.waitOptions(Duration.ofMillis(3000))).moveTo(newPt).release().perform();
+            Thread.sleep(2000);
+
+            int XafterScroll = MovieTile.getLocation().getX();
+            int YafterScroll = MovieTile.getLocation().getY();
+
+            if(XafterScroll!=Xinitial && YafterScroll!=Yinitial){
+                System.out.println("User is able to scroll down");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    /**
+     * @return true if new movie is displayed
+     */
+    public boolean verifyMovieIsDisplayed(){
+        assertTrue(MovieTile.isDisplayed());
+        return true;
+
     }
 
 

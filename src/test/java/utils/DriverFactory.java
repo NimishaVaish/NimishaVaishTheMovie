@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
             System.out.println("Movie app is launched");
 
             }catch(MalformedURLException e) {
-                System.out.println("Appium could not launch the app");
+                e.printStackTrace();
             }
         }
 
